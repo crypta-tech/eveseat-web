@@ -12,8 +12,12 @@
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    @if (config('web.config.seat51_bs5') == false)
     <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="{{ asset('web/css/bootstrap.min.css') }}">
+      <link rel="stylesheet" href="{{ asset('web/css/bootstrap.min.css') }}">
+    @else
+      <link rel="stylesheet" href="{{ asset('web/css/bootstrap5.2.3.min.css') }}">
+    @endif
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('web/css/all.min.css') }}">
     <!-- Select2 -->
@@ -118,8 +122,11 @@
   <!-- jQuery -->
   <script src="{{ asset('web/js/jquery.min.js') }}"></script>
   <!-- Bootstrap -->
-  <!--<script src="{{ asset('web/js/bootstrap.min.js') }}"></script>-->
+  @if (config('web.config.seat51_bs5') == false)
   <script src="{{ asset('web/js/bootstrap.bundle.min.js') }}"></script>
+  @else
+  <script src="{{ asset('web/js/bootstrap5.2.3.bundle.min.js') }}"></script>
+  @endif
   <!-- Select2 -->
   <script src="{{ asset('web/js/select2.full.min.js') }}"></script>
   <!-- Bootbox -->

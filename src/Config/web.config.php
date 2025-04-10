@@ -22,4 +22,5 @@
 
 return [
     'queue_status_update_time' => 10 * 1000, // milliseconds = seconds x 1,000
+    'seat51_bs5' => env('SEAT51_BS5', false),
 ];
